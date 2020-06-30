@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -11,6 +11,14 @@ import Paper from '@material-ui/core/Paper';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import logo from './img/cd-image.png'; // with import
 import Box from '@material-ui/core/Box';
+import axios from 'axios';
+
+
+axios.get('https://safe-headland-46948.herokuapp.com/api/v1/releaseInfo')
+  .then(function (response) {
+    // handle success
+    console.log(response);
+  })
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -39,11 +47,30 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ButtonAppBar() {
+export default function App() {
+  const [releaseInfo, setreleaseInfo] = useState(
+    {
+      "2020/07/03": [{
+          "title": "人生ふたり坂",
+          "artist": "内川ひろ美",
+          "migSrc": "https://m.media-amazon.com/images/I/318h4iu0jKL._SL160_.jpg",
+          "price": "1,200円"
+        },
+        {
+          title: "リヴィング・イン・ア・ゴースト・タウン",
+          artist: "ザ・ローリング・ストーンズ",
+          migSrc: "https://m.media-amazon.com/images/I/51Mv2OA7hAL._SL160_.jpg",
+          price: "2,420円"
+        }
+      ]
+    }
+  );
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
+      {/* <div>{Object.keys(releaseInfo)}</div> */}
+      <p>{releaseInfo["2020/07/03"]}</p>
       <AppBar position="static">
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
