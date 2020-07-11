@@ -82,7 +82,6 @@ export default function App() {
 
   return (
     <div className={classes.root}>
-      <p>{releaseInfo["2020/07/03"][0].title}</p>
       <AppBar position="static">
         <Toolbar>
           <IconButton
@@ -102,7 +101,7 @@ export default function App() {
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <Box bgcolor="primary.main" bgcolor="#757de8" p={2}>
-            2020年6月25日
+            2020/07/12
           </Box>
         </Grid>
       </Grid>
@@ -110,17 +109,17 @@ export default function App() {
         <Grid container spacing={2}>
           <Grid item>
             <ButtonBase className={classes.image}>
-              <img src={logo} />
+              <img src={releaseInfo["2020/07/12"][0].migSrc} />
             </ButtonBase>
           </Grid>
           <Grid item xs={6} sm container>
             <Grid item xs container direction="column" spacing={2}>
               <Grid item xs>
                 <Typography gutterBottom variant="subtitle1">
-                  CEREMONY
+                  {releaseInfo["2020/07/12"][0].title}
                 </Typography>
                 <Typography variant="body2" gutterBottom>
-                  King Gnu
+                  {releaseInfo["2020/07/12"][0].artist}
                 </Typography>
               </Grid>
             </Grid>
@@ -131,17 +130,17 @@ export default function App() {
         <Grid container spacing={2}>
           <Grid item>
             <ButtonBase className={classes.image}>
-              <img src={logo} />
+              <img src={releaseInfo["2020/07/12"][1].migSrc} />
             </ButtonBase>
           </Grid>
           <Grid item xs={6} sm container>
             <Grid item xs container direction="column" spacing={2}>
               <Grid item xs>
                 <Typography gutterBottom variant="subtitle1">
-                  歌うたいが歌うたいに来て 歌うた...
+                  {releaseInfo["2020/07/12"][1].title}
                 </Typography>
                 <Typography variant="body2" gutterBottom>
-                  GReeeeN
+                  {releaseInfo["2020/07/12"][1].artist}
                 </Typography>
               </Grid>
             </Grid>
@@ -151,7 +150,7 @@ export default function App() {
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <Box bgcolor="primary.main" bgcolor="#757de8" p={2}>
-            2020年6月24日
+            2020/07/03
           </Box>
         </Grid>
       </Grid>
@@ -159,17 +158,17 @@ export default function App() {
         <Grid container spacing={2}>
           <Grid item>
             <ButtonBase className={classes.image}>
-              <img src={logo} />
+              <img src={releaseInfo["2020/07/03"][0].migSrc} />
             </ButtonBase>
           </Grid>
           <Grid item xs={6} sm container>
             <Grid item xs container direction="column" spacing={2}>
               <Grid item xs>
                 <Typography gutterBottom variant="subtitle1">
-                  エスカパレード
+                  {releaseInfo["2020/07/03"][0].title}
                 </Typography>
                 <Typography variant="body2" gutterBottom>
-                  Official髭男dism
+                  {releaseInfo["2020/07/03"][0].artist}
                 </Typography>
               </Grid>
             </Grid>
@@ -180,38 +179,17 @@ export default function App() {
         <Grid container spacing={2}>
           <Grid item>
             <ButtonBase className={classes.image}>
-              <img src={logo} />
+              <img src={releaseInfo["2020/07/03"][1].migSrc} />
             </ButtonBase>
           </Grid>
           <Grid item xs={6} sm container>
             <Grid item xs container direction="column" spacing={2}>
               <Grid item xs>
                 <Typography gutterBottom variant="subtitle1">
-                  歌うたいが歌うたいに来て 歌うた...
+                  {releaseInfo["2020/07/03"][1].title}
                 </Typography>
                 <Typography variant="body2" gutterBottom>
-                  GReeeeN
-                </Typography>
-              </Grid>
-            </Grid>
-          </Grid>
-        </Grid>
-      </Paper>
-      <Paper className={classes.paper}>
-        <Grid container spacing={2}>
-          <Grid item>
-            <ButtonBase className={classes.image}>
-              <img src={logo} />
-            </ButtonBase>
-          </Grid>
-          <Grid item xs={6} sm container>
-            <Grid item xs container direction="column" spacing={2}>
-              <Grid item xs>
-                <Typography gutterBottom variant="subtitle1">
-                  歌うたいが歌うたいに来て 歌うた...
-                </Typography>
-                <Typography variant="body2" gutterBottom>
-                  GReeeeN
+                  {releaseInfo["2020/07/03"][1].artist}
                 </Typography>
               </Grid>
             </Grid>
