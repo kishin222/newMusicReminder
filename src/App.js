@@ -65,21 +65,33 @@ export default function App() {
     ],
     "2020/07/12": [
       {
-        title: "人生ふたり坂",
-        artist: "内川ひろ美",
+        title: "人生ふたり坂2",
+        artist: "内川ひろ美2",
         migSrc: "https://m.media-amazon.com/images/I/318h4iu0jKL._SL160_.jpg",
         price: "1,200円",
       },
       {
-        title: "リヴィング・イン・ア・ゴースト・タウン",
-        artist: "ザ・ローリング・ストーンズ",
+        title: "リヴィング・イン・ア・ゴースト・タウン2",
+        artist: "ザ・ローリング・ストーンズ2",
         migSrc: "https://m.media-amazon.com/images/I/51Mv2OA7hAL._SL160_.jpg",
         price: "2,420円",
       },
     ],
-  });
+  })
+  const releaseInfoKeys = Object.keys(releaseInfo)
+  console.log(releaseInfoKeys)
   const classes = useStyles();
-
+  const dates = Object.keys(releaseInfo)
+  const items = dates.map(date => {
+    return releaseInfo[date]
+  }
+  )
+  const aiueo = {
+    "a": [{ k: "ka", s: "sa", t: "ta" }],
+    "i": [{ k: "ki", s: "si", t: "ti" }],
+    "u": [{ k: "ku", s: "su", t: "tu" }],
+  }
+  const aiueo2 = Object.keys(aiueo)
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -98,104 +110,40 @@ export default function App() {
           <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
-      <Grid container spacing={3}>
-        <Grid item xs={12}>
-          <Box bgcolor="primary.main" bgcolor="#757de8" p={2}>
-            2020/07/12
-          </Box>
-        </Grid>
-      </Grid>
-      <Paper className={classes.paper}>
-        <Grid container spacing={2}>
-          <Grid item>
-            <ButtonBase className={classes.image}>
-              <img src={releaseInfo["2020/07/12"][0].migSrc} />
-            </ButtonBase>
-          </Grid>
-          <Grid item xs={6} sm container>
-            <Grid item xs container direction="column" spacing={2}>
-              <Grid item xs>
-                <Typography gutterBottom variant="subtitle1">
-                  {releaseInfo["2020/07/12"][0].title}
-                </Typography>
-                <Typography variant="body2" gutterBottom>
-                  {releaseInfo["2020/07/12"][0].artist}
-                </Typography>
-              </Grid>
+      {releaseInfoKeys.map((item) => (
+        <div>
+          <Grid container spacing={3}>
+            <Grid item xs={12}>
+              <Box bgcolor="primary.main" bgcolor="#757de8" p={2}>
+                {item}
+              </Box>
             </Grid>
           </Grid>
-        </Grid>
-      </Paper>
-      <Paper className={classes.paper}>
-        <Grid container spacing={2}>
-          <Grid item>
-            <ButtonBase className={classes.image}>
-              <img src={releaseInfo["2020/07/12"][1].migSrc} />
-            </ButtonBase>
-          </Grid>
-          <Grid item xs={6} sm container>
-            <Grid item xs container direction="column" spacing={2}>
-              <Grid item xs>
-                <Typography gutterBottom variant="subtitle1">
-                  {releaseInfo["2020/07/12"][1].title}
-                </Typography>
-                <Typography variant="body2" gutterBottom>
-                  {releaseInfo["2020/07/12"][1].artist}
-                </Typography>
+          {releaseInfo[item].map((item2) => (
+            <Paper className={classes.paper}>
+              <Grid container spacing={2}>
+                <Grid item>
+                  <ButtonBase className={classes.image}>
+                    <img src={item2.migSrc} />
+                  </ButtonBase>
+                </Grid>
+                <Grid item xs={6} sm container>
+                  <Grid item xs container direction="column" spacing={2}>
+                    <Grid item xs>
+                      <Typography gutterBottom variant="subtitle1">
+                        {item2.title}
+                      </Typography>
+                      <Typography variant="body2" gutterBottom>
+                        {item2.artist}
+                      </Typography>
+                    </Grid>
+                  </Grid>
+                </Grid>
               </Grid>
-            </Grid>
-          </Grid>
-        </Grid>
-      </Paper>
-      <Grid container spacing={3}>
-        <Grid item xs={12}>
-          <Box bgcolor="primary.main" bgcolor="#757de8" p={2}>
-            2020/07/03
-          </Box>
-        </Grid>
-      </Grid>
-      <Paper className={classes.paper}>
-        <Grid container spacing={2}>
-          <Grid item>
-            <ButtonBase className={classes.image}>
-              <img src={releaseInfo["2020/07/03"][0].migSrc} />
-            </ButtonBase>
-          </Grid>
-          <Grid item xs={6} sm container>
-            <Grid item xs container direction="column" spacing={2}>
-              <Grid item xs>
-                <Typography gutterBottom variant="subtitle1">
-                  {releaseInfo["2020/07/03"][0].title}
-                </Typography>
-                <Typography variant="body2" gutterBottom>
-                  {releaseInfo["2020/07/03"][0].artist}
-                </Typography>
-              </Grid>
-            </Grid>
-          </Grid>
-        </Grid>
-      </Paper>
-      <Paper className={classes.paper}>
-        <Grid container spacing={2}>
-          <Grid item>
-            <ButtonBase className={classes.image}>
-              <img src={releaseInfo["2020/07/03"][1].migSrc} />
-            </ButtonBase>
-          </Grid>
-          <Grid item xs={6} sm container>
-            <Grid item xs container direction="column" spacing={2}>
-              <Grid item xs>
-                <Typography gutterBottom variant="subtitle1">
-                  {releaseInfo["2020/07/03"][1].title}
-                </Typography>
-                <Typography variant="body2" gutterBottom>
-                  {releaseInfo["2020/07/03"][1].artist}
-                </Typography>
-              </Grid>
-            </Grid>
-          </Grid>
-        </Grid>
-      </Paper>
+            </Paper>
+          ))}
+        </div>
+      ))}
     </div>
   );
 }
