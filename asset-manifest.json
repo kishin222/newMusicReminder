@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/newMusicReminder/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/newMusicReminder/static/js/main.9bfaa398.chunk.js",
+    "main.js.map": "/newMusicReminder/static/js/main.9bfaa398.chunk.js.map",
+    "runtime-main.js": "/newMusicReminder/static/js/runtime-main.64fcd1bf.js",
+    "runtime-main.js.map": "/newMusicReminder/static/js/runtime-main.64fcd1bf.js.map",
+    "static/js/2.4a24c799.chunk.js": "/newMusicReminder/static/js/2.4a24c799.chunk.js",
+    "static/js/2.4a24c799.chunk.js.map": "/newMusicReminder/static/js/2.4a24c799.chunk.js.map",
+    "index.html": "/newMusicReminder/index.html",
+    "precache-manifest.81926ae4c26c773d48fcc0551a8f501b.js": "/newMusicReminder/precache-manifest.81926ae4c26c773d48fcc0551a8f501b.js",
+    "service-worker.js": "/newMusicReminder/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/newMusicReminder/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.4a24c799.chunk.js.LICENSE.txt": "/newMusicReminder/static/js/2.4a24c799.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.64fcd1bf.js",
+    "static/js/2.4a24c799.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.9bfaa398.chunk.js"
+  ]
+}
