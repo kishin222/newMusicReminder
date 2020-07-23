@@ -81,7 +81,7 @@ export default function App() {
   const releaseInfoKeys = Object.keys(releaseInfo)
   console.log(releaseInfoKeys)
   const classes = useStyles();
-  const dates = Object.keys(releaseInfo)
+  // const dates = Object.keys(releaseInfo)
   // const items = dates.map(date => {
   //   return releaseInfo[date]
   // }
