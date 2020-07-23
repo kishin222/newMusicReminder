@@ -9,7 +9,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import ButtonBase from "@material-ui/core/ButtonBase";
-import logo from "./img/cd-image.png"; // with import
+// import logo from "./img/cd-image.png"; // with import
 import Box from "@material-ui/core/Box";
 import axios from "axios";
 
@@ -82,16 +82,16 @@ export default function App() {
   console.log(releaseInfoKeys)
   const classes = useStyles();
   const dates = Object.keys(releaseInfo)
-  const items = dates.map(date => {
-    return releaseInfo[date]
-  }
-  )
-  const aiueo = {
-    "a": [{ k: "ka", s: "sa", t: "ta" }],
-    "i": [{ k: "ki", s: "si", t: "ti" }],
-    "u": [{ k: "ku", s: "su", t: "tu" }],
-  }
-  const aiueo2 = Object.keys(aiueo)
+  // const items = dates.map(date => {
+  //   return releaseInfo[date]
+  // }
+  // )
+  // const aiueo = {
+  //   "a": [{ k: "ka", s: "sa", t: "ta" }],
+  //   "i": [{ k: "ki", s: "si", t: "ti" }],
+  //   "u": [{ k: "ku", s: "su", t: "tu" }],
+  // }
+  // const aiueo2 = Object.keys(aiueo)
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -114,7 +114,7 @@ export default function App() {
         <div>
           <Grid container spacing={3}>
             <Grid item xs={12}>
-              <Box bgcolor="primary.main" bgcolor="#757de8" p={2}>
+              <Box bgcolor="#757de8" p={2}>
                 {item}
               </Box>
             </Grid>
@@ -124,7 +124,7 @@ export default function App() {
               <Grid container spacing={2}>
                 <Grid item>
                   <ButtonBase className={classes.image}>
-                    <img src={item2.migSrc} />
+                    <img src={item2.migSrc} alt="img"/>
                   </ButtonBase>
                 </Grid>
                 <Grid item xs={6} sm container>
@@ -144,6 +144,9 @@ export default function App() {
           ))}
         </div>
       ))}
+      <button onClick={() => setreleaseInfo()}>
+        Click me
+      </button>
     </div>
   );
 }
